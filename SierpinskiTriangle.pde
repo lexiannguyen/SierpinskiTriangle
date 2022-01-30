@@ -21,11 +21,18 @@ public void sierpinski(int x, int y, int len)
     triangle(x, y, (x + len/2), (y - len), (x + len), y);
     }
    else{
-    fill(255);
+    fill(0);
+    
+    sierpinski(x, y, len/2);
+    sierpinski(x + len/2, y, len/2, len/2);
+    sierpinski(x + len/4, y + len/2, len/2);
+    
+    /*
     triangle(x, y, (x + len/4), (y - len/2), (x + len/2), y);
     triangle((x + len/2), y, (x + len/4), (y - len/2), (x + len), y);
     triangle((x + len/4), (y - len/2), (x + len/8), (y - len), (x + len/2), (y-len/2));
     sierpinski(len - 20);
+    */
    }
 
 
