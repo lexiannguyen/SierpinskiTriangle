@@ -17,12 +17,15 @@ public void mouseDragged()//optional
 public void sierpinski(int x, int y, int len) 
 {
   if(len <= 20){
+    fill(0);
     triangle(x, y, (x + len/2), (y - len), (x + len), y);
     }
    else{
+    fill(0);
     sierpinski(x, y, (x + len/4), (y - len/2), (x + len/2), y);
     sierpinski((x + len/2), y, (x + len/4), (y - len/2), (x + len), y);
     sierpinski((x + len/4), (y - len/2), (x + len/8), (y - len), (x + len/2), (y-len/2));
+    len -= 10;
    }
 
 
