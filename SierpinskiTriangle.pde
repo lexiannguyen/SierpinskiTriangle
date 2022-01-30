@@ -4,7 +4,7 @@ public void setup()
 }
 public void draw()
 {
-  sierpinski(40, 50, 20);
+  sierpinski(40, 50, 50);
 }
 
 /*
@@ -22,12 +22,10 @@ public void sierpinski(int x, int y, int len)
     }
    else{
     fill(0);
-    sierpinski(x, y, (x + len/4), (y - len/2), (x + len/2), y);
-    /*
-    sierpinski((x + len/2), y, (x + len/4), (y - len/2), (x + len), y);
-    sierpinski((x + len/4), (y - len/2), (x + len/8), (y - len), (x + len/2), (y-len/2));
-    */
-    len -= 10;
+    triangle(x, y, (x + len/4), (y - len/2), (x + len/2), y);
+    triangle((x + len/2), y, (x + len/4), (y - len/2), (x + len), y);
+    triangle((x + len/4), (y - len/2), (x + len/8), (y - len), (x + len/2), (y-len/2));
+    sierpinski(len - 10);
    }
 
 
