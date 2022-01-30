@@ -4,7 +4,7 @@ public void setup()
 }
 public void draw()
 {
-  sierpinski(200, 200, 50);
+  sierpinski(170, 170, 50);
 }
 
 /*
@@ -25,7 +25,7 @@ public void sierpinski(int x, int y, int len)
     
     sierpinski(x, y, len/2);
     sierpinski(x + len/2, y, len/2, len/2);
-    sierpinski(x + len/4, y + len/2, len/2);
+    sierpinski(x + len/4, y - len/2, len/2);
     
     /*
     triangle(x, y, (x + len/4), (y - len/2), (x + len/2), y);
