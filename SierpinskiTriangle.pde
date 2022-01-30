@@ -4,7 +4,7 @@ public void setup()
 }
 public void draw()
 {
-  sierpinski(140, 220, 200);
+  sierpinski(120, 240, 200);
 }
 
 /*
