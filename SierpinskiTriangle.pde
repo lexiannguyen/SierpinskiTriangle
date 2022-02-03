@@ -1,18 +1,26 @@
 public int myColor = 0;
 public int mycolor2;
+public int triX = 125;
+public int triY = 500;
 public void setup()
 {
-  size(600, 600);
+  size(600, 600, P3D);
+  
 }
 public void draw()
 {
-  sierpinski(125, 500, 400, myColor, mycolor2);
+  background(200);
+  sierpinski(triX, triY, 400, myColor, mycolor2);
+ 
 }
 
 public void mouseDragged(){
-  sierpinski(mouseX, mouseY, 400, myColor, mycolor2);
+  triX = mouseX;
+  triY = mouseY;
+  redraw();
   
 }
+
 
 public void mousePressed()//optional
 {
@@ -27,6 +35,7 @@ public void mousePressed()//optional
 }
 
 
+
 public void keyPressed(){ //clears screan of repeating triangles
   if(key == 'c' || key == 'C'){
     background(200);
@@ -34,6 +43,8 @@ public void keyPressed(){ //clears screan of repeating triangles
   }
   
 }
+
+
 public void sierpinski(int x, int y, int len, int thecolor, int thecolor2) 
 {
   if(len <= 20){
@@ -43,6 +54,7 @@ public void sierpinski(int x, int y, int len, int thecolor, int thecolor2)
     else{
       fill(thecolor2);
     }*/
+    
     
     triangle(x, y, (x + len/2), (y - len), (x + len), y);
     }
