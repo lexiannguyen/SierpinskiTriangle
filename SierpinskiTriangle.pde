@@ -9,6 +9,10 @@ public void draw()
   sierpinski(125, 500, 400, myColor, mycolor2);
 }
 
+public void mouseDragged(){
+  sierpinski(mouseX, mouseY, 400, myColor, mycolor2);
+  
+}
 
 public void mousePressed()//optional
 {
@@ -23,16 +27,13 @@ public void mousePressed()//optional
 }
 
 
-/*
-public void keyPressed(){
-  if(key == 'r' || key == 'R'){
-    sierpinski(100, 270, 200, myColor, mycolor2);
-    sierpinski(100, -270, 200, myColor, mycolor2);
+public void keyPressed(){ //clears screan of repeating triangles
+  if(key == 'c' || key == 'C'){
+    background(200);
+    //sierpinski(100, -270, 200, myColor, mycolor2);
   }
   
 }
-
-*/
 public void sierpinski(int x, int y, int len, int thecolor, int thecolor2) 
 {
   if(len <= 20){
